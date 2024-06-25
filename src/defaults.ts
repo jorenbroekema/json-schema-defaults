@@ -1,4 +1,4 @@
-import { Definitions, Schema } from './types/schemas'
+import { Definitions, Schema } from './types/schemas.js'
 
 /**
  * check whether item is plain object

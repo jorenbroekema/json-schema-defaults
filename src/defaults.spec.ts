@@ -1,5 +1,5 @@
 import { describe, it, expect } from '@jest/globals'
-import defaults from './defaults'
+import defaults from './defaults.js'
 
 describe('defaults', function () {
 	it('reads defaults from object attributes', function () {
@@ -17,7 +17,7 @@ describe('defaults', function () {
 						type: 'integer',
 					},
 				},
-			})
+			}),
 		).toEqual({
 			sort: 'id',
 			per_page: 30,
@@ -29,7 +29,7 @@ describe('defaults', function () {
 			defaults({
 				title: 'Album Selector',
 				type: 'object',
-			})
+			}),
 		).toEqual({})
 	})
 
@@ -47,7 +47,7 @@ describe('defaults', function () {
 						default: false,
 					},
 				},
-			})
+			}),
 		).toEqual({
 			margin: 0,
 			render: false,
@@ -66,7 +66,7 @@ describe('defaults', function () {
 						albumSelector: true,
 					},
 				},
-			})
+			}),
 		).toEqual({
 			album: {},
 		})
@@ -81,7 +81,7 @@ describe('defaults', function () {
 				default: {
 					shortcut: '9IZukfpi',
 				},
-			})
+			}),
 		).toEqual({
 			shortcut: '9IZukfpi',
 		})
@@ -91,7 +91,7 @@ describe('defaults', function () {
 		expect(
 			defaults({
 				type: 'string',
-			})
+			}),
 		).toBeUndefined()
 	})
 
@@ -108,7 +108,7 @@ describe('defaults', function () {
 						type: 'string',
 					},
 				},
-			})
+			}),
 		).toEqual({
 			per_page: 30,
 		})
@@ -123,7 +123,7 @@ describe('defaults', function () {
 						type: 'string',
 					},
 				},
-			})
+			}),
 		).toEqual({})
 	})
 
@@ -135,7 +135,7 @@ describe('defaults', function () {
 					type: 'string',
 				},
 				default: ['getchute', 'chute'],
-			})
+			}),
 		).toEqual(['getchute', 'chute'])
 	})
 
@@ -157,7 +157,7 @@ describe('defaults', function () {
 						},
 					},
 				},
-			})
+			}),
 		).toEqual({
 			albums: [{ shortcut: 'abc123' }],
 		})
@@ -172,7 +172,7 @@ describe('defaults', function () {
 						type: 'array',
 					},
 				},
-			})
+			}),
 		).toEqual({
 			albums: [],
 		})
@@ -196,7 +196,7 @@ describe('defaults', function () {
 						default: 30,
 					},
 				},
-			})
+			}),
 		).toEqual({
 			per_page: 30,
 		})
@@ -220,7 +220,7 @@ describe('defaults', function () {
 						default: 30,
 					},
 				},
-			})
+			}),
 		).toEqual({})
 	})
 
@@ -250,7 +250,7 @@ describe('defaults', function () {
 						default: 30,
 					},
 				},
-			})
+			}),
 		).toEqual({
 			foo: {
 				per_page: 30,
@@ -279,7 +279,7 @@ describe('defaults', function () {
 						default: 30,
 					},
 				},
-			})
+			}),
 		).toEqual({
 			per_page: 30,
 			per_page_big: 50,

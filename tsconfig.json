@@ -3,8 +3,12 @@
 	"exclude": ["**/*.spec.ts"],
 	"compilerOptions": {
 		"strict": true,
+		"target": "ESNext",
 		"outDir": "dist",
 		"esModuleInterop": true,
-		"declaration": true
+		"declaration": true,
+		"skipLibCheck": true,
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext"
 	}
 }
